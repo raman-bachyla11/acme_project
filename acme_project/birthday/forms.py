@@ -38,7 +38,8 @@ class BirthdayForm(forms.ModelForm):
             # именем одного из участников Beatles.
             send_mail(
                 subject='Another Beatles member',
-                message=f'{first_name} {last_name} пытался опубликовать запись!',
+                message=f'{first_name} {last_name} '
+                        'пытался опубликовать запись!',
                 from_email='birthday_form@acme.not',
                 recipient_list=['admin@acme.not'],
                 fail_silently=True,
